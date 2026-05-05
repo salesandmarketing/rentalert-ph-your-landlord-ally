@@ -44,7 +44,7 @@ export default function Resources() {
           <div className="aspect-video max-w-3xl mx-auto rounded-2xl overflow-hidden shadow-card bg-background">
             <iframe
               className="w-full h-full"
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              src="https://www.youtube.com/embed/-FX3_w6CIp0"
               title="RentAlert PH tutorial"
               loading="lazy"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
