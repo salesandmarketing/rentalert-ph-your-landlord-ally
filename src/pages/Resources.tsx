@@ -5,7 +5,9 @@ import { Download, FileText, BookOpen, Scale, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { posts } from "./BlogPost";
 
-const BASE = "/rentalert-ph-your-landlord-ally";
+const BASE = window.location.hostname === "salesandmarketing.github.io" 
+  ? "/rentalert-ph-your-landlord-ally" 
+  : "";
 
 const guides = [
   { 
