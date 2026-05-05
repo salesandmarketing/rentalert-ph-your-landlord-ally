@@ -6,9 +6,24 @@ import { Link } from "react-router-dom";
 import { posts } from "./BlogPost";
 
 const guides = [
-  { icon: Scale, title: "Philippine Rent Control Act (RA 9653) — Overview", desc: "A plain-language summary of what RA 9653 means for landlords and tenants." },
-  { icon: FileText, title: "Demand Letter Template", desc: "Ready-to-use, lawyer-reviewed template tailored for the Philippines." },
-  { icon: BookOpen, title: "Eviction Process Guide", desc: "Step-by-step from notice to writ of execution under Rule 70." },
+  { 
+    icon: Scale, 
+    title: "Philippine Rent Control Act (RA 9653) — Overview", 
+    desc: "A plain-language summary of what RA 9653 means for landlords and tenants.",
+    href: "/ra9653-overview.pdf"
+  },
+  { 
+    icon: FileText, 
+    title: "Demand Letter Template", 
+    desc: "Ready-to-use, lawyer-reviewed template tailored for the Philippines.",
+    href: "/demand-letter-template.pdf"
+  },
+  { 
+    icon: BookOpen, 
+    title: "Eviction Process Guide", 
+    desc: "Step-by-step from notice to writ of execution under Rule 70.",
+    href: "/eviction-process-guide.pdf"
+  },
 ];
 
 export default function Resources() {
@@ -31,7 +46,11 @@ export default function Resources() {
                 <div className="h-12 w-12 rounded-xl bg-accent-soft text-accent grid place-items-center mb-4"><g.icon className="h-6 w-6" /></div>
                 <h3 className="text-lg font-semibold text-primary">{g.title}</h3>
                 <p className="mt-2 text-muted-foreground flex-1">{g.desc}</p>
-                <Button variant="accent" className="mt-5 self-start"><Download className="h-4 w-4" /> Download PDF</Button>
+                <a href={g.href} target="_blank" rel="noopener noreferrer" download>
+                  <Button variant="accent" className="mt-5 self-start">
+                    <Download className="h-4 w-4" /> Download PDF
+                  </Button>
+                </a>
               </Card>
             ))}
           </div>
