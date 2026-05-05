@@ -5,24 +5,26 @@ import { Download, FileText, BookOpen, Scale, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { posts } from "./BlogPost";
 
+const BASE = "/rentalert-ph-your-landlord-ally";
+
 const guides = [
   { 
     icon: Scale, 
     title: "Philippine Rent Control Act (RA 9653) — Overview", 
     desc: "A plain-language summary of what RA 9653 means for landlords and tenants.",
-    href: "/rentalert-ph-your-landlord-ally/ra9653-overview.pdf"
+    href: BASE + "/ra9653-overview.pdf"
   },
   { 
     icon: FileText, 
     title: "Demand Letter Template", 
     desc: "Ready-to-use, lawyer-reviewed template tailored for the Philippines.",
-    href: "/rentalert-ph-your-landlord-ally/demand-letter-template.pdf"`
+    href: BASE + "/demand-letter-template.pdf"
   },
   { 
     icon: BookOpen, 
     title: "Eviction Process Guide", 
     desc: "Step-by-step from notice to writ of execution under Rule 70.",
-    href: "/rentalert-ph-your-landlord-ally/eviction-process-guide.pdf"
+    href: BASE + "/eviction-process-guide.pdf"
   },
 ];
 
@@ -78,7 +80,7 @@ export default function Resources() {
           <SectionHeading eyebrow="Articles" title="From the blog" />
           <div className="grid md:grid-cols-3 gap-6">
             {posts.map((p) => (
-              <Link to={`/blog/${p.slug}`} key={p.slug} className="block focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-lg">
+              <Link to={"/blog/" + p.slug} key={p.slug} className="block focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-lg">
                 <Card className="overflow-hidden shadow-soft hover:shadow-card transition-shadow group h-full">
                   <div className="h-40 bg-hero relative">
                     <span className="absolute top-4 left-4 bg-accent text-accent-foreground text-xs font-semibold px-2.5 py-1 rounded-full">{p.tag}</span>
