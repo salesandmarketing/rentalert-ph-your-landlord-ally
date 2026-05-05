@@ -10,19 +10,19 @@ const guides = [
     icon: Scale, 
     title: "Philippine Rent Control Act (RA 9653) — Overview", 
     desc: "A plain-language summary of what RA 9653 means for landlords and tenants.",
-    href: "/ra9653-overview.pdf"
+    href: `${import.meta.env.BASE_URL}ra9653-overview.pdf`
   },
   { 
     icon: FileText, 
     title: "Demand Letter Template", 
     desc: "Ready-to-use, lawyer-reviewed template tailored for the Philippines.",
-    href: "/demand-letter-template.pdf"
+    href: `${import.meta.env.BASE_URL}demand-letter-template.pdf`
   },
   { 
     icon: BookOpen, 
     title: "Eviction Process Guide", 
     desc: "Step-by-step from notice to writ of execution under Rule 70.",
-    href: "/eviction-process-guide.pdf"
+    href: `${import.meta.env.BASE_URL}eviction-process-guide.pdf`
   },
 ];
 
